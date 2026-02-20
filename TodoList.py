@@ -12,23 +12,23 @@ def todo_list():
 
         option = input ("\n Choose: ")
         if option == "1":
-            viec = input ("\n Nhập việc cần thêm: ")
-            list.append (viec)
+            work = input ("\n Add work: ")
+            list.append (work)
             print("\n Work added successfully")
 
         elif option == "2":
             if not list:
                 print ("\n List unavailable")
             else:
-                for i, viec in enumerate(list, start=1):
-                    print(f"{i}. {viec}")
+                for i, work in enumerate(list, start=1):
+                    print(f"{i}. {work}")
 
         elif option == "3":
             if not list:
                 print("\n No work to remove")
                 continue
-            for i, viec in enumerate(list, start=1):
-                    print(f"\n {i}. {viec}")
+            for i, work in enumerate(list, start=1):
+                    print(f"\n {i}. {work}")
             try:
                 number = int(input("\n The sequence number of the work to be removed: "))
                 if 1 <= number <= len(list):
